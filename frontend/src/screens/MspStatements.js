@@ -22,7 +22,7 @@ function MspStatements() {
                 <tbody>
                     {msp.map((item) =>{
                     return(
-                     <tr>
+                     <tr key={item.id}>
                      <td>{item.commodity}</td>
                      <td>{item.yearone} &#8377;</td>
                      <td>{item.yeartwo} &#8377;</td>

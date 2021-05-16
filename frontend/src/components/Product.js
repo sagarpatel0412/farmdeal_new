@@ -27,6 +27,12 @@ function Product({ product }) {
                 <Card.Text as="h3">
                     ₹{product.price}
                 </Card.Text>
+                <Card.Text as="h6">
+                <i class="fas fa-share-alt"></i> Share
+                </Card.Text>
+                <Card.Text as="h6">
+                User:{product.user}
+                </Card.Text>
             </Card.Body>
         </Card>
     )

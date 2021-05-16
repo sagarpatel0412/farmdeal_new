@@ -9,9 +9,9 @@ function KishanYojana() {
       <div className="alert alert-info" role="alert">
           <marquee direction="right">Daily check for latest updates on schemes.</marquee>
       </div>
-      <div className="alert alert-success" role="alert">
+      {/* <div className="alert alert-success" role="alert">
           <marquee><a href="https://farmer.gov.in/mspstatements.aspx">Check Minimum Support Price</a></marquee>
-      </div>
+      </div> */}
 
       <div className="container">
         <h1 style={{ fontWeight: "bolder", fontSize: "40px" }}>
@@ -23,7 +23,7 @@ function KishanYojana() {
          { item.map((items) => {
       console.log("items===>",item)
       return(
-        <div>
+        <div key={item.id}>
          
         <h1>{items.scheme}</h1>
         <p>
@@ -39,9 +39,9 @@ function KishanYojana() {
           height="400"
           src={items.video}
           title="YouTube video player"
-          frameborder="0"
+          frameBorder={0}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen="true"
+          allowFullScreen={true}
         ></iframe>
         <hr />
         </div>

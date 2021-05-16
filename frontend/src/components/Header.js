@@ -32,7 +32,7 @@ function Header() {
                         <SearchBox />
                         <Nav className="ml-auto">
                         <LinkContainer to='/Kishan-Yojana'>
-                                <Nav.Link > <i class="fas fa-lightbulb"></i> Kishan Yojana</Nav.Link>
+                                <Nav.Link > <i className="fas fa-lightbulb"></i> Kishan Yojana</Nav.Link>
                             </LinkContainer>
                         <LinkContainer to='/About'>
                                 <Nav.Link ><i className="fas fa-info-circle"></i> About us</Nav.Link>

@@ -62,7 +62,7 @@ function Footer() {
 
   </div>
  
-  <div className="footer-copyright text-center py-3" style={{backgroundColor:"#1F618D " ,color:"white"}}>© 2020 Copyright:FarmDeal
+  <div className="footer-copyright text-center py-3" style={{backgroundColor:"#1F618D " ,color:"white"}}>&copy; {new Date().getFullYear()} Copyright : FarmDeal | Current-time { Date().toLocaleString()}
   </div>
 
 

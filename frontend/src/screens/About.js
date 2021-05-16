@@ -45,7 +45,7 @@ function About() {
                   <div className="card-body">
                     <h5 className="card-title">Sagar Patel</h5>
                     <p className="card-text">CEO & CO-Founder</p>
-                    <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" className="btn btn-primary">Contact</a>
+                    <a href="https://www.instagram.com/" className="btn btn-primary" style={{borderRadius:"12px",border:"none"}}><i className="fab fa-instagram fa-2x" style={{color:"white"}}></i> Instagram</a>
                   </div>
                   
                   </div>
@@ -54,10 +54,10 @@ function About() {
                   <img className="card-img-top" src={shivam} style={{height:"200px",width:"200px"}}/>
                   </center>
                   <div className="card-body">
-                    <h5 className="card-title">Shivam Agrwal</h5>
+                    <h5 className="card-title">Shivam Agrawal</h5>
                     <p className="card-text">CEO & CO-Founder</p>
-                    <i className="fas fa-instagram fa-2x"></i>
-                    <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" className="btn btn-primary">contact</a>
+                    
+                    <a href="https://www.instagram.com/" className="btn btn-primary" style={{borderRadius:"12px",border:"none"}}><i className="fab fa-instagram fa-2x" style={{color:"white"}}></i> Instagram</a>
                   </div>
                   
                   </div>
@@ -68,7 +68,7 @@ function About() {
                   <div className="card-body">
                     <h5 className="card-title">Priyam Patel</h5>
                     <p className="card-text">CEO & CO-Founder</p>
-                    <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" className="btn btn-primary">Contact</a>
+                    <a href="https://www.instagram.com/" className="btn btn-primary" style={{borderRadius:"12px",border:"none"}}><i className="fab fa-instagram fa-2x" style={{color:"white"}}></i> Instagram</a>
                   </div>
                   
                   </div>
@@ -79,7 +79,7 @@ function About() {
                   <div className="card-body">
                     <h5 className="card-title">Jeet Jadhav</h5>
                     <p className="card-text">CEO & CO-Founder</p>
-                    <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" className="btn btn-primary">Contact</a>
+                    <a href="https://www.instagram.com/" className="btn btn-primary" style={{borderRadius:"12px",border:"none"}}><i className="fab fa-instagram fa-2x" style={{color:"white"}}></i> Instagram</a>
                   </div>
                   
                   </div>
