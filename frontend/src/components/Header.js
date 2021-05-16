@@ -4,6 +4,7 @@ import { Navbar, Nav, Container, Row, NavDropdown } from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
 import SearchBox from './SearchBox'
 import { logout } from '../actions/userActions'
+import logo from '../logo.jpg';
 
 
 
@@ -20,10 +21,10 @@ function Header() {
 
     return (
         <header>
-            <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
+            <Navbar  variant="dark" expand="lg" collapseOnSelect style={{backgroundColor:"#1F618D "}}>
                 <Container>
                     <LinkContainer to='/'>
-                        <Navbar.Brand>farmDeal</Navbar.Brand>
+                        <Navbar.Brand><img src={logo} alt="farmdeal" style={{height:"80px",width:"80px",borderRadius:"50%",border:"none",outline:"fit"}} /></Navbar.Brand>
                     </LinkContainer>
 
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -31,20 +32,20 @@ function Header() {
                         <SearchBox />
                         <Nav className="ml-auto">
                         <LinkContainer to='/Kishan-Yojana'>
-                                <Nav.Link >Kishan Yojana</Nav.Link>
+                                <Nav.Link > <i class="fas fa-lightbulb"></i> Kishan Yojana</Nav.Link>
                             </LinkContainer>
                         <LinkContainer to='/About'>
-                                <Nav.Link >About us</Nav.Link>
+                                <Nav.Link ><i className="fas fa-info-circle"></i> About us</Nav.Link>
                             </LinkContainer>
                             <LinkContainer to='/weather'>
-                                <Nav.Link ><i className="fas fa-cloud-moon"></i>weather</Nav.Link>
+                                <Nav.Link ><i className="fas fa-cloud-moon"></i> Weather</Nav.Link>
                             </LinkContainer>
                             
                             <LinkContainer to='/Contact'>
-                                <Nav.Link >Contact us</Nav.Link>
+                                <Nav.Link ><i className="fas fa-address-card"></i> Contact us</Nav.Link>
                             </LinkContainer>
                             <LinkContainer to='/cart'>
-                                <Nav.Link ><i className="fas fa-shopping-cart"></i>Cart</Nav.Link>
+                                <Nav.Link ><i className="fas fa-shopping-cart"></i> Cart</Nav.Link>
                             </LinkContainer>
 
                             {userInfo ? (
@@ -53,12 +54,12 @@ function Header() {
                                         <NavDropdown.Item>Profile</NavDropdown.Item>
                                     </LinkContainer>
 
-                                    <NavDropdown.Item onClick={logoutHandler}>Logout</NavDropdown.Item>
+                                    <NavDropdown.Item onClick={logoutHandler}> Logout</NavDropdown.Item>
 
                                 </NavDropdown>
                             ) : (
                                     <LinkContainer to='/login'>
-                                        <Nav.Link><i className="fas fa-user"></i>Login</Nav.Link>
+                                        <Nav.Link><i className="fas fa-user"></i> Login</Nav.Link>
                                     </LinkContainer>
                                 )}
 

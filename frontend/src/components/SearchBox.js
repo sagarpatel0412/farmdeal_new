@@ -29,8 +29,9 @@ function SearchBox() {
             <Button
                 type='submit'
                 //variant='outline-success'
+                
                 className='fa fa-search'
-                style={{borderRadius:"12px",border:"none"}}
+                style={{outline:"none",textDecoration:"none",borderRadius:"8px",border:"none"}}
             >
                 
             </Button>

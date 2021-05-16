@@ -10,7 +10,7 @@ function WeatherPage() {
     useEffect(() => {
         
         axios
-        .get(`http://api.openweathermap.org/data/2.5/weather?q=${location}&appid=9e8e23893d9809d88d05092556993bb1`)
+        .get(`http://api.openweathermap.org/data/2.5/weather?q=bharuch&appid=9e8e23893d9809d88d05092556993bb1`)
         // .then((response) => response.text())
         .then((res) => {
             // setWeatherData(res.data)
@@ -46,8 +46,8 @@ function WeatherPage() {
             <h1>Weather Details</h1>
             <h2>{location}</h2>
             {weatherData === undefined ? null :
-            <div>
-               <p> <i className="fas fa-cloud-moon fa-3x"></i></p>
+            <div style={{backgroundColor:"#1F618D", padding:"20px"}}>
+               <p> <i className="fas fa-cloud-moon fa-3x" style={{color:"white"}}></i></p>
              <h2>City: {weatherData.name}</h2> 
             <h2>Station: {weatherData.base}</h2>
             <h2>Temp: {weatherData.main.temp -274.15} celcius</h2> 

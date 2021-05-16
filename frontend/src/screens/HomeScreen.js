@@ -24,9 +24,9 @@ function HomeScreen({ history }) {
 
     return (
         <div>
-            {!keyword && <ProductCarousel />}
-            <div className="alert alert-success" role="alert">
-              <marquee><Link to="/msp">Check Msp Status</Link></marquee>
+            {/* {!keyword && <ProductCarousel />} */}
+            <div className="alert alert-success" role="alert" style={{backgroundColor:"#1F618D",color:"white"}}>
+              <marquee><Link to="/msp" style={{color:"white",textDecoration:"none"}}>Check Msp Status</Link></marquee>
             </div>
             <h1>Listen to what Ministry of Agriculture say</h1>
             <Row>

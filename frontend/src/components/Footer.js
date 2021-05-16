@@ -13,7 +13,7 @@ function Footer() {
     //   </Container>
     // </footer>
    
-<footer className="page-footer font-small darken-3" style={{backgroundColor:" #287b14"}}>
+<footer className="page-footer font-small darken-3" style={{backgroundColor:" #5499C7"}}>
 
 
   <div className="container">
@@ -30,27 +30,27 @@ function Footer() {
      
      </center> */}
           <a className="fb-ic">
-            <i className="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            <i className="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x" style={{color:"white"}}> </i>
           </a>
         
           <a className="tw-ic">
-            <i className="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            <i className="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x" style={{color:"white"}}> </i>
           </a>
         
           <a className="gplus-ic">
-            <i className="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            <i className="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x" style={{color:"white"}}> </i>
           </a>
        
           <a className="li-ic">
-            <i className="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            <i className="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x" style={{color:"white"}}> </i>
           </a>
          
           <a className="ins-ic">
-            <i className="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            <i className="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x" style={{color:"white"}}> </i>
           </a>
          
           <a className="pin-ic">
-            <i className="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+            <i className="fab fa-pinterest fa-lg white-text fa-2x" style={{color:"white"}}> </i>
           </a>
           </center>
         </div>
@@ -62,7 +62,7 @@ function Footer() {
 
   </div>
  
-  <div className="footer-copyright text-center py-3" style={{backgroundColor:" #040404 "}}>© 2020 Copyright:FarmDeal
+  <div className="footer-copyright text-center py-3" style={{backgroundColor:"#1F618D " ,color:"white"}}>© 2020 Copyright:FarmDeal
   </div>
 
 

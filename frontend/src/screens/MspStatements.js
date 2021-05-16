@@ -6,12 +6,12 @@ function MspStatements() {
     console.log("msp===>",msp);
     return (
         <div>
-            <h1>Minimum Support price</h1>
+            <h1>Minimum Support price <i className="fas fa-rupee-sign"></i></h1>
             <p>Msp here shown are from last two year Reference from <a href="https://farmer.gov.in/mspstatements.aspx" style={{fontWeight:"bolder"}}>farmers portal</a></p>
             <p>Reference: number are reference to price</p>
             <Row>
                 <Col>
-            <Table striped bordered hover variant="dark">
+            <Table striped bordered hover variant="dark" style={{backgroundColor:"#5499C7",border:"none"}}>
                 <thead>
                     <tr>
                     <th style={{fontSize:"16px"}}>Commodity</th>
