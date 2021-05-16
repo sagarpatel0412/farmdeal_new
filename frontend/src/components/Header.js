@@ -36,6 +36,9 @@ function Header() {
                         <LinkContainer to='/About'>
                                 <Nav.Link >About us</Nav.Link>
                             </LinkContainer>
+                            <LinkContainer to='/weather'>
+                                <Nav.Link ><i className="fas fa-cloud-moon"></i>weather</Nav.Link>
+                            </LinkContainer>
                             
                             <LinkContainer to='/Contact'>
                                 <Nav.Link >Contact us</Nav.Link>

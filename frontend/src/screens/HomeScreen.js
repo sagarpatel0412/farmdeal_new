@@ -7,6 +7,7 @@ import Message from '../components/Message'
 import Paginate from '../components/Paginate'
 import ProductCarousel from '../components/ProductCarousel'
 import { listProducts } from '../actions/productActions'
+import {Link} from "react-router-dom"
 
 
 function HomeScreen({ history }) {
@@ -25,7 +26,7 @@ function HomeScreen({ history }) {
         <div>
             {!keyword && <ProductCarousel />}
             <div className="alert alert-success" role="alert">
-              <marquee><a href="https://farmer.gov.in/mspstatements.aspx" style={{fontWeight:"bold",fontSize:"12px"}}>Check Minimum Support Price</a></marquee>
+              <marquee><Link to="/msp">Check Msp Status</Link></marquee>
             </div>
             <h1>Listen to what Ministry of Agriculture say</h1>
             <Row>

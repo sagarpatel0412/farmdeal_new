@@ -1,3 +1,4 @@
+import React from 'react';
 import { Container } from "react-bootstrap";
 import { HashRouter as Router, Route } from "react-router-dom";
 import Header from "./components/Header";
@@ -20,6 +21,8 @@ import OrderListScreen from "./screens/OrderListScreen";
 import About from "./screens/About";
 import Contact from "./screens/Contact";
 import KishanYojana from "./screens/KishanYojana";
+import MspStatements from './screens/MspStatements';
+import WeatherPage from './screens/WeatherPage';
 
 function App() {
   return (
@@ -40,6 +43,8 @@ function App() {
           <Route path="/About" component={About} />
           <Route path="/Contact" component={Contact} />
           <Route path="/Kishan-Yojana" component={KishanYojana} />
+          <Route path="/msp" component={MspStatements} />
+          <Route path="/weather" component={WeatherPage} />
 
           <Route path="/admin/userlist" component={UserListScreen} />
           <Route path="/admin/user/:id/edit" component={UserEditScreen} />
