@@ -26,7 +26,7 @@ function WeatherPage() {
         // })
         onSubmitOne()
     }, [])
-    const weather = weatherData;
+    // const weather = weatherData;
      function onSubmitOne (){
         // preventDefault()
          axios
@@ -60,15 +60,26 @@ function WeatherPage() {
             </form>
             
             <h1>Weather Details</h1>
-            <h2>{location}</h2>
+            <h2>City you searched for:{location && location}</h2>
             {weatherData === undefined ? null :
             <div style={{backgroundColor:"#1F618D", padding:"20px"}}>
                <p> <i className="fas fa-cloud-moon fa-3x" style={{color:"white"}}></i></p>
-             <h2>City: {weatherData.name}</h2> 
-            <h2>Station: {weatherData.base}</h2>
-            <h2>Temp: {weatherData.main.temp -274.15}&#176; celcius</h2> 
-            <h2>humidity: {weatherData.main.humidity}</h2>
-            <h2>wind: {weatherData.wind.speed} km/s</h2>
+             <h2>City: {weatherData.name && weatherData.name}</h2>
+            <h2>Weather: {weatherData.weather && weatherData.weather.map((item)=>{
+                return(
+                    <div>
+                        <h2>Description : {item.description && item.description}</h2>
+                        <h2>Weather Now :{item.main && item.main}</h2>
+                    </div>
+                )
+            })}</h2>
+            <h2>Station: {weatherData.base && weatherData.base}</h2>
+            <h2>Temp: {weatherData.main.temp && weatherData.main.temp -274.15}&#176; celcius</h2> 
+            <h2>humidity: {weatherData.main.humidity && weatherData.main.humidity}</h2>
+            <h2>wind: {weatherData.wind.speed && weatherData.wind.speed} km/s</h2>
+            <h2>Feels like:{weatherData.main.feels_like && weatherData.main.feels_like - 274.15}&#176; celcius</h2>
+            <h2>Max Temp:{weatherData.main.temp_max && weatherData.main.temp_max - 274.15}&#176; celcius</h2>
+            <h2>Min temp:{weatherData.main.temp_min && weatherData.main.temp_min - 274.15}&#176; celcius</h2>
             </div>
               }
             </Col>
