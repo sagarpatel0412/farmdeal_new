@@ -8,38 +8,54 @@ function WeatherPage() {
     
 
     useEffect(() => {
-        
-        axios
-        .get(`http://api.openweathermap.org/data/2.5/weather?q=bharuch&appid=9e8e23893d9809d88d05092556993bb1`)
-        // .then((response) => response.text())
-        .then((res) => {
-            // setWeatherData(res.data)
-            const weather = res.data
-            // setWeatherData(weather)
-            console.log("Data====>",weather)
-             setWeatherData(weather)
-             console.log("weather====>",weatherData)
+      
+        // axios
+        // .get(`http://api.openweathermap.org/data/2.5/weather?q=${location}&appid=9e8e23893d9809d88d05092556993bb1`)
+        // // .then((response) => response.text())
+        // .then((res) => {
+        //     // setWeatherData(res.data)
+        //     const weather = res.data
+        //     // setWeatherData(weather)
+        //     console.log("Data====>",weather)
+        //      setWeatherData(weather)
+        //      console.log("weather====>",weatherData)
 
-        })
-        .catch((err) => {
-            console.log("error")
-        })
+        // })
+        // .catch((err) => {
+        //     console.log("error")
+        // })
+        onSubmitOne()
     }, [])
     const weather = weatherData;
-     function onSubmit (e){
-         e.preventDefault()
-         setLocation(e.target.value)
+     function onSubmitOne (){
+        // preventDefault()
+         axios
+         .get(`http://api.openweathermap.org/data/2.5/weather?q=${location}&appid=9e8e23893d9809d88d05092556993bb1`)
+         // .then((response) => response.text())
+         .then((res) => {
+             // setWeatherData(res.data)
+             const weather = res.data
+             // setWeatherData(weather)
+             console.log("Data====>",weather)
+              setWeatherData(weather)
+              console.log("weather====>",weatherData)
+ 
+         })
+         .catch((err) => {
+             console.log("error")
+         })
+         
      } 
     return (
         <div>
             <h1>weather info</h1>
             <Row>
             <Col>
-            <form>
-                <div className="form-group">
+            <form > 
+                <div className="form-group" style={{display:"flex"}}>
                     
-                    <input type="text" className="form-control" value={location} onChange={(e) => onSubmit(e)} placeholder="Type location to get weather info"/>
-                    <button className="btn btn-success" type="submit"><i className="fas fa-cloud"></i></button>
+                    <input type="text" className="form-control" value={location} onChange={(e) => setLocation(e.target.value)} style={{width:"50%"}}  placeholder="Type location to get weather info"/>
+                    <button className="btn btn-primary" type="submit" onClick={ onSubmitOne} style={{marginLeft:"10px",borderRadius:"12px",border:"none"}}><i className="fas fa-search"></i></button>
                     </div>
             </form>
             
@@ -50,7 +66,7 @@ function WeatherPage() {
                <p> <i className="fas fa-cloud-moon fa-3x" style={{color:"white"}}></i></p>
              <h2>City: {weatherData.name}</h2> 
             <h2>Station: {weatherData.base}</h2>
-            <h2>Temp: {weatherData.main.temp -274.15} celcius</h2> 
+            <h2>Temp: {weatherData.main.temp -274.15}&#176; celcius</h2> 
             <h2>humidity: {weatherData.main.humidity}</h2>
             <h2>wind: {weatherData.wind.speed} km/s</h2>
             </div>
