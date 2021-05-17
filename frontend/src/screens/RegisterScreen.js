@@ -41,7 +41,9 @@ function RegisterScreen({ location, history }) {
 
     return (
         <FormContainer>
-            <h1>Sign In</h1>
+            <div style={{backgroundColor:"#D6EAF8",padding:"20px",borderRadius:"8px",border:"none"}}>
+            <h1>Sign Up</h1>
+            <hr/>
             {message && <Message variant='danger'>{message}</Message>}
             {error && <Message variant='danger'>{error}</Message>}
             {loading && <Loader />}
@@ -109,6 +111,7 @@ function RegisterScreen({ location, history }) {
                         </Link>
                 </Col>
             </Row>
+            </div>
         </FormContainer >
     )
 }

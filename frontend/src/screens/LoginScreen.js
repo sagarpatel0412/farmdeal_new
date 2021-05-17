@@ -30,8 +30,10 @@ function LoginScreen({ location, history }) {
     }
 
     return (
-        <FormContainer>
+        <FormContainer style={{backgroundColor:"#95A5A6",padding:"10px",borderRadius:"8px",border:"none"}}>
+            <div style={{backgroundColor:"#D6EAF8",padding:"20px",borderRadius:"8px",border:"none"}}>
             <h1>Sign In</h1>
+            <hr/>
             {error && <Message variant='danger'>{error}</Message>}
             {loading && <Loader />}
             <Form onSubmit={submitHandler}>
@@ -68,11 +70,11 @@ function LoginScreen({ location, history }) {
                 <Col>
                     New Customer? <Link
                         to={redirect ? `/register?redirect=${redirect}` : '/register'}>
-                        Register
+                        Register Now
                         </Link>
                 </Col>
             </Row>
-
+            </div>
         </FormContainer>
     )
 }

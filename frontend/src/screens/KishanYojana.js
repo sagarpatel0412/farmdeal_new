@@ -18,14 +18,15 @@ function KishanYojana() {
           Kishan Yojana
         </h1>
         <div className="row">
-          <div className="col-6">
+          <div className="col-12">
           <h1>Total {item.length} schemes are available on our website</h1>
          { item.map((items) => {
       console.log("items===>",item)
       return(
-        <div key={item.id}>
+        <div key={item.id} style={{backgroundColor:"#ECF0F1 ",marginBottom:"10px",padding:"15px",borderRadius:"8px",borxer:"none"}}>
          
         <h1>{items.scheme}</h1>
+        <hr/>
         <p>
         {items.description}
         </p>
@@ -33,7 +34,7 @@ function KishanYojana() {
           For more details check{" "}
           <a href={items.link}>{items.link}</a>
         </p>
-
+        <center>
         <iframe
           width="500"
           height="400"
@@ -43,6 +44,7 @@ function KishanYojana() {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen={true}
         ></iframe>
+        </center>
         <hr />
         </div>
       )
