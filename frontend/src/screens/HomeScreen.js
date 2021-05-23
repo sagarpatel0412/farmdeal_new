@@ -27,7 +27,7 @@ function HomeScreen({ history }) {
             {/* {!keyword && <ProductCarousel />} */}
             {/* <ProductCarousel/> */}
             <div className="alert alert-success" role="alert" style={{backgroundColor:"#1F618D",color:"white"}}>
-              <marquee><Link to="/msp" style={{color:"white",textDecoration:"none"}}>Check Msp Status</Link></marquee>
+              <marquee><Link to="/msp" style={{color:"white",textDecoration:"none"}}>Check Msp Status</Link> || <Link to="/Agri-Market" style={{color:"white",textDecoration:"none"}}>Agricultural market</Link> </marquee>
             </div>
             <h1>Listen to what Ministry of Agriculture say</h1>
             <Row>

@@ -23,6 +23,7 @@ import Contact from "./screens/Contact";
 import KishanYojana from "./screens/KishanYojana";
 import MspStatements from './screens/MspStatements';
 import WeatherPage from './screens/WeatherPage';
+import AgriMarket from './screens/AgriMarket';
 
 function App() {
   return (
@@ -45,7 +46,8 @@ function App() {
           <Route path="/Kishan-Yojana" component={KishanYojana} />
           <Route path="/msp" component={MspStatements} />
           <Route path="/weather" component={WeatherPage} />
-
+          <Route path="/Agri-Market" component={AgriMarket}/>
+          
           <Route path="/admin/userlist" component={UserListScreen} />
           <Route path="/admin/user/:id/edit" component={UserEditScreen} />
 

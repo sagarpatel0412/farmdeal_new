@@ -43,7 +43,7 @@ function UserListScreen({ history }) {
             {loading
                 ? (<Loader />)
                 : error
-                    ? (<Message variant='danger'>{error}</Message>)
+                    ? (<Message variant='danger'>{error} You dont have admin rights</Message>)
                     : (
                         <Table striped bordered hover responsive className='table-sm'>
                             <thead>

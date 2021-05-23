@@ -77,7 +77,7 @@ function ProductListScreen({ history, match }) {
             {loading
                 ? (<Loader />)
                 : error
-                    ? (<Message variant='danger'>{error}</Message>)
+                    ? (<Message variant='danger'>{error} You dont have admin rights</Message>)
                     : (
                         <div>
                             <Table striped bordered hover responsive className='table-sm'>
