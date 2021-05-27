@@ -5,6 +5,8 @@ import markets from '../markets';
 import cloud from '../cloud.svg';
 import '../App.css';
 import night from '../night.svg';
+import nighttime from '../nighttime.jpg'
+import daytime from '../daytime.jpg'
 
 function WeatherPage() {
     const [location,setLocation] =useState('')
@@ -104,7 +106,7 @@ function WeatherPage() {
              
               <div>
                  {   weatherData === undefined ? error :
-                <div className="container1" style={ hours < 18 ? {backgroundColor:"#268AD0 "} : {backgroundColor:"#2E3A42 "} }>
+                <div className="container1" style={ hours < 18 ? {backgroundImage:`url(${daytime})`,backgroundRepeat:"no-repeat",backgroundSize:"1100px 300px"} : {backgroundImage:`url(${nighttime})`,backgroundRepeat:"no-repeat",backgroundSize:"1100px 300px"} }>
                             
                             <div className="widget">
                                 <center>
@@ -114,8 +116,8 @@ function WeatherPage() {
                                     <h5 className="weather-status"> {weatherData.weather && weatherData.weather.map((item)=>{
                                         return(
                                             <div>
-                                                <h5>{item.description && item.description}</h5>
-                                                <h5>{item.main && item.main}</h5>
+                                                <h5 style={hours < 18 ? {color:"#000"}:{color:"#fff"}}>{item.description && item.description}</h5>
+                                                <h5 style={hours < 18 ? {color:"#000"}:{color:"#fff"}}>{item.main && item.main}</h5>
                                             </div>
                                         )
                                     })}</h5>
@@ -125,28 +127,28 @@ function WeatherPage() {
                                 <center>
                                 <div style={{marginTop:"80px"}}>
                                     
-                                    {hours < 18 ? <h6>Day Time</h6> : <h6>Night Time</h6> }
-                                    <h5 className="city">City:{weatherData.name && weatherData.name}</h5>
-                                    <h5 className="degree">Temp:{weatherData.main.temp && weatherData.main.temp -274.15}&#176;c</h5>
+                                    {hours < 18 ? <h6 style={hours < 18 ? {color:"#000"}:{color:"#fff"}}>Day Time</h6> : <h6 style={hours < 18 ? {color:"#000"}:{color:"#fff"}}>Night Time</h6> }
+                                    <h5 className="city" style={hours < 18 ? {color:"#000"}:{color:"#fff"}}>City:{weatherData.name && weatherData.name}</h5>
+                                    <h5 className="degree" style={hours < 18 ? {color:"#000"}:{color:"#fff"}}>Temp:{weatherData.main.temp && weatherData.main.temp -274.15}&#176;c</h5>
                                 </div>
                                 </center>
                                 </div>
                                 </center>
                                 <div className="bottom">
-                                    <div>
-                                        Wind Speed <span>{weatherData.wind.speed && weatherData.wind.speed} kmph</span>
+                                    <div style={hours < 18 ? {color:"#000"}:{color:"#fff"}}>
+                                        Wind Speed <span style={hours < 18 ? {color:"#000"}:{color:"#fff"}}>{weatherData.wind.speed && weatherData.wind.speed} kmph</span>
                                     </div>
-                                    <div>
-                                        Humidity <span>{weatherData.main.humidity && weatherData.main.humidity}</span>
+                                    <div style={hours < 18 ? {color:"#000"}:{color:"#fff"}}>
+                                        Humidity <span style={hours < 18 ? {color:"#000"}:{color:"#fff"}}>{weatherData.main.humidity && weatherData.main.humidity}</span>
                                     </div>
-                                    <div>
-                                        Feels Like <span>{weatherData.main.feels_like && weatherData.main.feels_like - 274.15}&#176;c</span>
+                                    <div style={hours < 18 ? {color:"#000"}:{color:"#fff"}}>
+                                        Feels Like <span style={hours < 18 ? {color:"#000"}:{color:"#fff"}}>{weatherData.main.feels_like && weatherData.main.feels_like - 274.15}&#176;c</span>
                                     </div>
-                                    <div>
-                                        Max Temp <span>{weatherData.main.temp_max && weatherData.main.temp_max - 274.15}&#176;c</span>
+                                    <div style={hours < 18 ? {color:"#000"}:{color:"#fff"}}>
+                                        Max Temp <span style={hours < 18 ? {color:"#000"}:{color:"#fff"}}>{weatherData.main.temp_max && weatherData.main.temp_max - 274.15}&#176;c</span>
                                     </div>
-                                    <div>
-                                        Min Temp <span>{weatherData.main.temp_min && weatherData.main.temp_min - 274.15}&#176;c</span>
+                                    <div style={hours < 18 ? {color:"#000"}:{color:"#fff"}}>
+                                        Min Temp <span style={hours < 18 ? {color:"#000"}:{color:"#fff"}}>{weatherData.main.temp_min && weatherData.main.temp_min - 274.15}&#176;c</span>
                                     </div>
                                 </div>
                             </div>
