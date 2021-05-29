@@ -24,6 +24,8 @@ import KishanYojana from "./screens/KishanYojana";
 import MspStatements from './screens/MspStatements';
 import WeatherPage from './screens/WeatherPage';
 import AgriMarket from './screens/AgriMarket';
+import NearbyStore from './screens/NearbyStore';
+import "leaflet/dist/leaflet.css";
 
 function App() {
   return (
@@ -47,7 +49,8 @@ function App() {
           <Route path="/msp" component={MspStatements} />
           <Route path="/weather" component={WeatherPage} />
           <Route path="/Agri-Market" component={AgriMarket}/>
-          
+          <Route path="/nearby-store" component={NearbyStore}/>
+
           <Route path="/admin/userlist" component={UserListScreen} />
           <Route path="/admin/user/:id/edit" component={UserEditScreen} />
 
